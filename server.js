@@ -16,7 +16,7 @@ var articleOne={
              <p>
                    This is the content of my first article
              </p>`                
-             }
+             };
 function createTemplate (data)  { 
 var title = data.title;
 var date = data.date;
