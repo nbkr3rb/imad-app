@@ -20,7 +20,7 @@ var articles = {
              },
     'article-two': {
     title: 'Article Two | Avanthi vemuri',
-    heading: 'Article Tne',
+    heading: 'Article Two',
     date: 'Feb 20, 2018',
     content: `<p>
                    This is the content of my second article
@@ -36,11 +36,12 @@ var articles = {
 };
 
 function createTemplate (data)  { 
-var title = data.title;
-var date = data.date;
-var heading = data.heading;
-var content = data.content;
-var htmlTemplate = `
+     var title = data.title;
+     var date = data.date;
+     var heading = data.heading;
+     var content = data.content;
+     
+     var htmlTemplate = `
 <html>
     <head>
         <title>
@@ -81,7 +82,7 @@ app.get('/:articleName', function(req, res) {
     // articleName == article-one
     //article(articleName) == {}content object for article-one
     var articleName = req.params.articleName;
-    res.send(createTemplate(article(articleName))); 
+    res.send(createTemplate(articles(articleName))); 
 });
 
 app.get('/ui/style.css', function (req, res) {
