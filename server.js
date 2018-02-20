@@ -81,8 +81,7 @@ app.get('/:articleName', function(req, res) {
     // articleName == article-one
     //article(articleName) == {}content object for article-one
     var articleName = req.params.articleName;
-    //extract the paramaeter, this is again the functionality provided by express framework
-   res.send(createTemplate(articles(articleName))); 
+    res.send(createTemplate(articles(articleName))); 
 });
 
 app.get('/ui/style.css', function (req, res) {
